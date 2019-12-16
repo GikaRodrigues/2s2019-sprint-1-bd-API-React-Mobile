@@ -1,0 +1,447 @@
+{
+	"info": {
+		"_postman_id": "b24244e2-9a57-4718-87f2-d5885f51bb73",
+		"name": "Senai.OpFlix.WebApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Lancamentos",
+			"item": [
+				{
+					"name": "Lancamentos.Listar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbUBtYWlsLmNvbSIsImNoYXZlIjoidmFsb3IiLCJqdGkiOiIxIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW5pc3RyYWRvciIsInBlcm1pc3NhbyI6IkFkbWluaXN0cmFkb3IiLCJleHAiOjE1NzMyMjMwNzcsImlzcyI6Ik9wRmxpeC5XZWJBcGkiLCJhdWQiOiJPcEZsaXguV2ViQXBpIn0.a0kXaSFm356GdSGz27YZGtH4P4VneiZuN2-zrXWxv48",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/Lancamentos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Lancamentos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lancamentos.Atualizar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbUBtYWlsLmNvbSIsImNoYXZlIjoidmFsb3IiLCJqdGkiOiIxIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW5pc3RyYWRvciIsInBlcm1pc3NhbyI6IkFkbWluaXN0cmFkb3IiLCJleHAiOjE1NzM0NzYyNTcsImlzcyI6Ik9wRmxpeC5XZWJBcGkiLCJhdWQiOiJPcEZsaXguV2ViQXBpIn0.K3hTLDlPp_vehlqOU9eoY8fP9HYaGP8jEskEZHFpGss",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"UpZERA\",\r\n    \"sinopse\": \"Tem um veio doido e uma crianca com milhoes de baloes\",\r\n    \"duracao\": 170,\r\n    \"tipo\": \"Serie\",\r\n    \"dataLancamento\": \"2009-09-04T00:00:00\",\r\n    \"idCategoria\": 2,\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Lancamentos/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Lancamentos",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lancamentos.Cadastrar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbUBtYWlsLmNvbSIsImNoYXZlIjoidmFsb3IiLCJqdGkiOiIxIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW5pc3RyYWRvciIsInBlcm1pc3NhbyI6IkFkbWluaXN0cmFkb3IiLCJleHAiOjE1NzM0NzYyNTcsImlzcyI6Ik9wRmxpeC5XZWJBcGkiLCJhdWQiOiJPcEZsaXguV2ViQXBpIn0.K3hTLDlPp_vehlqOU9eoY8fP9HYaGP8jEskEZHFpGss",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"UpZER\",\r\n    \"sinopse\": \"Tem um veio doido e uma crianca com milhoes de baloes\",\r\n    \"duracao\": 170,\r\n    \"tipo\": \"Filme\",\r\n    \"dataLancamento\": \"2009-09-04T00:00:00\",\r\n    \"idCategoria\": 2,\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Lancamentos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Lancamentos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lancamentos.Deletar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbUBtYWlsLmNvbSIsImNoYXZlIjoidmFsb3IiLCJqdGkiOiIxIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW5pc3RyYWRvciIsInBlcm1pc3NhbyI6IkFkbWluaXN0cmFkb3IiLCJleHAiOjE1NzM0NzYyNTcsImlzcyI6Ik9wRmxpeC5XZWJBcGkiLCJhdWQiOiJPcEZsaXguV2ViQXBpIn0.K3hTLDlPp_vehlqOU9eoY8fP9HYaGP8jEskEZHFpGss",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/Lancamentos/13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Lancamentos",
+								"13"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "Usuarios.Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\" : \"adm@mail.com\",\n\t\"senha\" : \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuarios.Cadastrar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbUBtYWlsLmNvbSIsImNoYXZlIjoidmFsb3IiLCJqdGkiOiIxIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW5pc3RyYWRvciIsInBlcm1pc3NhbyI6IkFkbWluaXN0cmFkb3IiLCJleHAiOjE1NzM0NzYyNTcsImlzcyI6Ik9wRmxpeC5XZWJBcGkiLCJhdWQiOiJPcEZsaXguV2ViQXBpIn0.K3hTLDlPp_vehlqOU9eoY8fP9HYaGP8jEskEZHFpGss",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\" : \"TioPatinhas\",\r\n    \"cpf\" : \"275673676\",\r\n    \"email\" : \"tio@email.com\",\r\n    \"senha\" : \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuarios.CadastrarAdm",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbUBtYWlsLmNvbSIsImNoYXZlIjoidmFsb3IiLCJqdGkiOiIxIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW5pc3RyYWRvciIsInBlcm1pc3NhbyI6IkFkbWluaXN0cmFkb3IiLCJleHAiOjE1NzM0NzYyNTcsImlzcyI6Ik9wRmxpeC5XZWJBcGkiLCJhdWQiOiJPcEZsaXguV2ViQXBpIn0.K3hTLDlPp_vehlqOU9eoY8fP9HYaGP8jEskEZHFpGss",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\" : \"TioPatinhasv2\",\r\n    \"cpf\" : \"295673676\",\r\n    \"email\" : \"adm@email.com\",\r\n    \"senha\" : \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Usuarios/CadastroAdmin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Usuarios",
+								"CadastroAdmin"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Categorias",
+			"item": [
+				{
+					"name": "Categorias.Listar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbUBtYWlsLmNvbSIsImNoYXZlIjoidmFsb3IiLCJqdGkiOiIxIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW5pc3RyYWRvciIsInBlcm1pc3NhbyI6IkFkbWluaXN0cmFkb3IiLCJleHAiOjE1NzM0Nzk5NjYsImlzcyI6Ik9wRmxpeC5XZWJBcGkiLCJhdWQiOiJPcEZsaXguV2ViQXBpIn0.xjwqByvWK-Sz9HTab0Xbrx7fPHsZeMyGytg8T-YCCZw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Categorias",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Categorias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Categorias.Cadastrar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbUBtYWlsLmNvbSIsImNoYXZlIjoidmFsb3IiLCJqdGkiOiIxIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW5pc3RyYWRvciIsInBlcm1pc3NhbyI6IkFkbWluaXN0cmFkb3IiLCJleHAiOjE1NzM0Nzk5NjYsImlzcyI6Ik9wRmxpeC5XZWJBcGkiLCJhdWQiOiJPcEZsaXguV2ViQXBpIn0.xjwqByvWK-Sz9HTab0Xbrx7fPHsZeMyGytg8T-YCCZw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"categoria\": \"Desenho\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Categorias",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Categorias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Categorias.Atualizar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbUBtYWlsLmNvbSIsImNoYXZlIjoidmFsb3IiLCJqdGkiOiIxIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW5pc3RyYWRvciIsInBlcm1pc3NhbyI6IkFkbWluaXN0cmFkb3IiLCJleHAiOjE1NzM0Nzk5NjYsImlzcyI6Ik9wRmxpeC5XZWJBcGkiLCJhdWQiOiJPcEZsaXguV2ViQXBpIn0.xjwqByvWK-Sz9HTab0Xbrx7fPHsZeMyGytg8T-YCCZw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"categoria\": \"Desenho Animasdo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Categorias",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Categorias"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

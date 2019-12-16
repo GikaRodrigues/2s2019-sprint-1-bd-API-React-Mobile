@@ -25,7 +25,7 @@ class Login extends Component {
     efetuarLogin = (event) => {
         event.preventDefault();
 
-        let url= "http://localhost:5000/api/login";
+        let url= "http://192.168.4.224:5000/api/login";
 
         Axios.post(url, {
             headers: {
@@ -38,7 +38,7 @@ class Login extends Component {
                 if (response.status === 200) {
                     console.log(response.data.token);
                     localStorage.setItem("usuario-opflix", response.data.token);
-                    this.props.history.push('/categorias');
+                    this.props.history.push('/Lancamentos');
                 } else {
                     console.log('deu ruim');
                 }
@@ -61,7 +61,7 @@ class Login extends Component {
                         <br />
                         <input type="submit" name="" value="Entrar" id="submit_login"/>
                     </form>
-                    <Link to="/Cadastrar" id="login">Ainda não possui uma conta? Cadastre-se</Link>
+                    <Link to="/Cadastrar/Usuario" id="login">Ainda não possui uma conta? Cadastre-se</Link>
                 </div>
             </div>
         )
